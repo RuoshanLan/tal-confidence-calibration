@@ -1,0 +1,25 @@
+# Install (micromamba or conda):
+#     micromamba create -n tal_calib -f environment.yml
+#     micromamba activate tal_calib
+#     pip install -e .
+#
+# Exact versions the results were produced and verified with; the
+# reproduce criterion is byte-identical output, so keep them pinned.
+
+name: tal_calib
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - scipy=1.15.2
+  - scikit-learn=1.7.2
+  - pyarrow=25.0.0
+  - pyyaml=6.0.3
+  - pip
+  - pip:
+      - netcal==1.4.0
+      # torch (required by netcal): CUDA 13 wheel, as validated.
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch==2.10.0

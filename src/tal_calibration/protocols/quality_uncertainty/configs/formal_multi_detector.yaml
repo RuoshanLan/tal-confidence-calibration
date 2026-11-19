@@ -1,0 +1,27 @@
+# The supplementary ten-arm detector matrix: the five ActionFormer datasets
+# plus THUMOS14 x {TriDet, TadTR, TE-TAD} and EPIC verb x {TriDet, TE-TAD},
+# seeds 0-4. Produces results/quality_uncertainty_multidetector/ (supp.
+# tables tab:supp:estimation-ladder and tab:supp:matched-point).
+#
+# Its five ActionFormer arms reproduce results/quality_uncertainty/ cell for
+# cell. The other five arms are registered per (dataset, detector) in
+# configs/datasets.yaml: TriDet runs the full 45-feature interface off its
+# pre-NMS pool; TadTR and TE-TAD run the 15-feature post-NMS interface. The
+# readout tables belong to the main run, so this run switches them off.
+run:
+  n_boot: 2000
+  readout: false
+experiments:
+  quality_uncertainty:
+    datasets:
+      - thumos
+      - thumos_tridet
+      - thumos_tadtr
+      - thumos_tetad
+      - epic_verb
+      - epic_verb_tridet
+      - epic_verb_tetad
+      - epic_noun
+      - ego4d
+      - anet
+    seeds: [0, 1, 2, 3, 4]

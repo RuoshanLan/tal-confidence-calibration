@@ -1,0 +1,220 @@
+{
+  "framework_root_relative": true,
+  "count": 31,
+  "inputs": {
+    "data/raw/annotations/thumos/thumos14.json": {
+      "target": "data/raw/annotations/thumos/thumos14.json",
+      "role": "annotation",
+      "dataset": "thumos"
+    },
+    "data/raw/annotations/anet/anet1.3_tsp_filtered.json": {
+      "target": "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+      "role": "annotation",
+      "dataset": "anet"
+    },
+    "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json": {
+      "target": "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json",
+      "role": "annotation",
+      "dataset": "epic_noun"
+    },
+    "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json": {
+      "target": "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json",
+      "role": "annotation",
+      "dataset": "epic_verb"
+    },
+    "data/raw/annotations/ego4d/ego4d.json": {
+      "target": "data/raw/annotations/ego4d/ego4d.json",
+      "role": "annotation",
+      "dataset": "ego4d"
+    },
+    "data/raw/predictions/actionformer/thumos/post_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/thumos/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "actionformer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/actionformer/thumos/pre_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/thumos/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "actionformer",
+      "stage": "pre_nms"
+    },
+    "data/raw/predictions/actionformer/epic_verb/post_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/epic_verb/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "actionformer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/actionformer/epic_verb/pre_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/epic_verb/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "actionformer",
+      "stage": "pre_nms"
+    },
+    "data/raw/predictions/actionformer/epic_noun/post_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/epic_noun/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_noun",
+      "model": "actionformer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/actionformer/epic_noun/pre_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/epic_noun/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_noun",
+      "model": "actionformer",
+      "stage": "pre_nms"
+    },
+    "data/raw/predictions/actionformer/ego4d/post_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/ego4d/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "ego4d",
+      "model": "actionformer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/actionformer/ego4d/pre_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/ego4d/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "ego4d",
+      "model": "actionformer",
+      "stage": "pre_nms"
+    },
+    "data/raw/predictions/actionformer/anet/post_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/anet/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "anet",
+      "model": "actionformer",
+      "stage": "post_nms",
+      "external_class_topk": 2,
+      "external_score_source": "CUHK video-level classification scores (cuhk_val_simp_share.json, distributed with ActionFormer's ActivityNet-1.3 annotations)"
+    },
+    "data/raw/predictions/actionformer/anet/pre_nms.pkl": {
+      "target": "data/raw/predictions/actionformer/anet/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "anet",
+      "model": "actionformer",
+      "stage": "pre_nms",
+      "external_class_topk": 2,
+      "external_score_source": "CUHK video-level classification scores (cuhk_val_simp_share.json, distributed with ActionFormer's ActivityNet-1.3 annotations)"
+    },
+    "data/raw/predictions/tridet/thumos/post_nms.pkl": {
+      "target": "data/raw/predictions/tridet/thumos/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "tridet",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/tridet/epic_verb/post_nms.pkl": {
+      "target": "data/raw/predictions/tridet/epic_verb/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "tridet",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/tridet/epic_noun/post_nms.pkl": {
+      "target": "data/raw/predictions/tridet/epic_noun/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_noun",
+      "model": "tridet",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/temporalmaxer/thumos/post_nms.pkl": {
+      "target": "data/raw/predictions/temporalmaxer/thumos/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "temporalmaxer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/temporalmaxer/epic_verb/post_nms.pkl": {
+      "target": "data/raw/predictions/temporalmaxer/epic_verb/post_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "temporalmaxer",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/tadtr/thumos/detection_nms.json": {
+      "target": "data/raw/predictions/tadtr/thumos/detection_nms.json",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "tadtr",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/te_tad/thumos/t_nms.json": {
+      "target": "data/raw/predictions/te_tad/thumos/t_nms.json",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "te_tad",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/tadtr/anet/detection_nms_top2.json": {
+      "target": "data/raw/predictions/tadtr/anet/detection_nms_top2.json",
+      "role": "prediction",
+      "dataset": "anet",
+      "model": "tadtr",
+      "stage": "post_nms",
+      "external_class_topk": 2,
+      "external_score_source": "CUHK video-level classification scores (cuhk_val_simp_share.json, distributed with ActionFormer's ActivityNet-1.3 annotations)"
+    },
+    "data/raw/predictions/tridet/anet/post_nms_ext.pkl": {
+      "target": "data/raw/predictions/tridet/anet/post_nms_ext.pkl",
+      "role": "prediction",
+      "dataset": "anet",
+      "model": "tridet",
+      "stage": "post_nms",
+      "external_class_topk": 2,
+      "external_score_source": "CUHK video-level classification scores (cuhk_val_simp_share.json, distributed with ActionFormer's ActivityNet-1.3 annotations)"
+    },
+    "data/raw/predictions/te_tad/epic_verb/t_nms.json": {
+      "target": "data/raw/predictions/te_tad/epic_verb/t_nms.json",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "te_tad",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/te_tad/epic_noun/t_nms.json": {
+      "target": "data/raw/predictions/te_tad/epic_noun/t_nms.json",
+      "role": "prediction",
+      "dataset": "epic_noun",
+      "model": "te_tad",
+      "stage": "post_nms"
+    },
+    "data/raw/predictions/tadtr_nq100/anet/detection_nms_top2.json": {
+      "target": "data/raw/predictions/tadtr_nq100/anet/detection_nms_top2.json",
+      "role": "prediction",
+      "dataset": "anet",
+      "model": "tadtr_nq100",
+      "stage": "post_nms",
+      "external_class_topk": 2,
+      "external_score_source": "CUHK video-level classification scores (cuhk_val_simp_share.json, distributed with ActionFormer's ActivityNet-1.3 annotations)",
+      "note": "Table 1's ActivityNet-1.3 TadTR row: TadTR trained with num_queries=100, so 100 proposals x CUHK top-2 = 200 rows per video. The num_queries=10 model (anet:tadtr) is used only for the Table 1 double-dagger footnote."
+    },
+    "data/raw/predictions/tridet/thumos/pre_nms.pkl": {
+      "target": "data/raw/predictions/tridet/thumos/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "thumos",
+      "model": "tridet",
+      "stage": "pre_nms"
+    },
+    "data/raw/predictions/tridet/epic_verb/pre_nms.pkl": {
+      "target": "data/raw/predictions/tridet/epic_verb/pre_nms.pkl",
+      "role": "prediction",
+      "dataset": "epic_verb",
+      "model": "tridet",
+      "stage": "pre_nms"
+    },
+    "data/raw/annotations/ego4d/moments_train.json": {
+      "target": "data/raw/annotations/ego4d/moments_train.json",
+      "role": "annotation_multiannotator_raw",
+      "dataset": "ego4d"
+    },
+    "data/raw/annotations/ego4d/moments_val.json": {
+      "target": "data/raw/annotations/ego4d/moments_val.json",
+      "role": "annotation_multiannotator_raw",
+      "dataset": "ego4d"
+    }
+  }
+}

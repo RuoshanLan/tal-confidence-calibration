@@ -1,0 +1,15 @@
+# Inputs and run outputs; data/manifest.json is tracked, the inputs are not.
+/data/raw/
+/runs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# editors / os
+.ipynb_checkpoints/
+.DS_Store

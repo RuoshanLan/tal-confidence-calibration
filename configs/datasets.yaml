@@ -1,0 +1,150 @@
+# Dataset and prediction paths, relative to the framework root. The files live
+# under data/raw/ (gitignored); checksums are in data/manifest.json.
+
+datasets:
+  ego4d:
+    anno: data/raw/annotations/ego4d/ego4d.json
+    pred: data/raw/predictions/actionformer/ego4d/post_nms.pkl
+    pre_nms: data/raw/predictions/actionformer/ego4d/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: ego4d
+    eval_split: validation
+    top_k: null            # native export
+    detector: actionformer
+    feature_interface: full_observable
+  epic_verb:
+    anno: data/raw/annotations/epic_verb/epic_kitchens_100_verb.json
+    pred: data/raw/predictions/actionformer/epic_verb/post_nms.pkl
+    pre_nms: data/raw/predictions/actionformer/epic_verb/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: epic_verb
+    eval_split: validation
+    top_k: null            # native export
+    detector: actionformer
+    feature_interface: full_observable
+  epic_noun:
+    anno: data/raw/annotations/epic_noun/epic_kitchens_100_noun.json
+    pred: data/raw/predictions/actionformer/epic_noun/post_nms.pkl
+    pre_nms: data/raw/predictions/actionformer/epic_noun/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: epic_noun
+    eval_split: validation
+    top_k: null            # native export
+    detector: actionformer
+    feature_interface: full_observable
+  thumos:
+    anno: data/raw/annotations/thumos/thumos14.json
+    pred: data/raw/predictions/actionformer/thumos/post_nms.pkl
+    pre_nms: data/raw/predictions/actionformer/thumos/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: thumos
+    eval_split: test
+    top_k: null            # native export
+    detector: actionformer
+    feature_interface: full_observable
+  anet:
+    anno: data/raw/annotations/anet/anet1.3_tsp_filtered.json
+    pred: data/raw/predictions/actionformer/anet/post_nms.pkl
+    pre_nms: data/raw/predictions/actionformer/anet/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: anet
+    eval_split: validation
+    top_k: null            # native export
+    detector: actionformer
+    feature_interface: full_observable
+
+  # ---- further detectors (quality_uncertainty). Each names its canonical
+  # dataset, whose annotation, eval split and video partition it shares, so
+  # every detector of a dataset uses the same train/cal/test split. `detector`
+  # uses the benchmark's spelling; `feature_interface` is full_observable when
+  # a pre-NMS candidate pool exists and post_nms_observable for the DETR-style
+  # detectors, which have none.
+  thumos_tridet:
+    anno: data/raw/annotations/thumos/thumos14.json
+    pred: data/raw/predictions/tridet/thumos/post_nms.pkl
+    pre_nms: data/raw/predictions/tridet/thumos/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: thumos
+    detector: tridet
+    feature_interface: full_observable
+    eval_split: test
+    top_k: 200             # as in OFFICIAL_POPULATION ("thumos", "tridet")
+  thumos_tadtr:
+    anno: data/raw/annotations/thumos/thumos14.json
+    pred: data/raw/predictions/tadtr/thumos/detection_nms.json
+    source_type: json
+    canonical: thumos
+    detector: tadtr
+    feature_interface: post_nms_observable
+    eval_split: test
+    top_k: null            # native <=200/video
+  thumos_tetad:
+    anno: data/raw/annotations/thumos/thumos14.json
+    pred: data/raw/predictions/te_tad/thumos/t_nms.json
+    source_type: json
+    canonical: thumos
+    detector: te-tad
+    feature_interface: post_nms_observable
+    eval_split: test
+    top_k: 200             # as in OFFICIAL_POPULATION; native max 900/video
+  epic_verb_tridet:
+    anno: data/raw/annotations/epic_verb/epic_kitchens_100_verb.json
+    pred: data/raw/predictions/tridet/epic_verb/post_nms.pkl
+    pre_nms: data/raw/predictions/tridet/epic_verb/pre_nms.pkl
+    source_type: pickle
+    pre_nms_source_type: pickle
+    canonical: epic_verb
+    detector: tridet
+    feature_interface: full_observable
+    eval_split: validation
+    top_k: null            # native 2000/video
+  epic_verb_tetad:
+    anno: data/raw/annotations/epic_verb/epic_kitchens_100_verb.json
+    pred: data/raw/predictions/te_tad/epic_verb/t_nms.json
+    source_type: json
+    canonical: epic_verb
+    detector: te-tad
+    feature_interface: post_nms_observable
+    eval_split: validation
+    top_k: null            # native 2000/video
+
+# The benchmark's 17 (dataset, model) pairs (must equal OFFICIAL_POPULATION).
+# Each pins a post-NMS prediction file; the annotation comes from datasets:.
+benchmark_pairs:
+  - {dataset: thumos,    model: actionformer, pred: data/raw/predictions/actionformer/thumos/post_nms.pkl,    source_type: pickle}
+  - {dataset: thumos,    model: tridet,       pred: data/raw/predictions/tridet/thumos/post_nms.pkl,          source_type: pickle}
+  - {dataset: thumos,    model: temporalmax,  pred: data/raw/predictions/temporalmaxer/thumos/post_nms.pkl,   source_type: pickle}
+  - {dataset: thumos,    model: tadtr,        pred: data/raw/predictions/tadtr/thumos/detection_nms.json,     source_type: json}
+  - {dataset: thumos,    model: te-tad,       pred: data/raw/predictions/te_tad/thumos/t_nms.json,            source_type: json}
+  - {dataset: epic_verb, model: actionformer, pred: data/raw/predictions/actionformer/epic_verb/post_nms.pkl, source_type: pickle}
+  - {dataset: epic_verb, model: tridet,       pred: data/raw/predictions/tridet/epic_verb/post_nms.pkl,       source_type: pickle}
+  - {dataset: epic_verb, model: temporalmax,  pred: data/raw/predictions/temporalmaxer/epic_verb/post_nms.pkl, source_type: pickle}
+  - {dataset: epic_verb, model: te-tad,       pred: data/raw/predictions/te_tad/epic_verb/t_nms.json,         source_type: json}
+  - {dataset: epic_noun, model: actionformer, pred: data/raw/predictions/actionformer/epic_noun/post_nms.pkl, source_type: pickle}
+  - {dataset: epic_noun, model: tridet,       pred: data/raw/predictions/tridet/epic_noun/post_nms.pkl,       source_type: pickle}
+  - {dataset: epic_noun, model: te-tad,       pred: data/raw/predictions/te_tad/epic_noun/t_nms.json,         source_type: json}
+  - {dataset: ego4d,     model: actionformer, pred: data/raw/predictions/actionformer/ego4d/post_nms.pkl,     source_type: pickle}
+  - {dataset: anet,      model: actionformer, pred: data/raw/predictions/actionformer/anet/post_nms.pkl,      source_type: pickle}
+  - {dataset: anet,      model: tadtr,        pred: data/raw/predictions/tadtr/anet/detection_nms_top2.json,  source_type: json}
+  - {dataset: anet,      model: tridet,       pred: data/raw/predictions/tridet/anet/post_nms_ext.pkl,        source_type: pickle}
+  # TadTR with num_queries=100: 100 proposals x CUHK top-2 = 200
+  # rows/video. This is Table 1's TadTR row; the num_queries=10 arm above
+  # backs only the table's footnote.
+  - {dataset: anet,      model: tadtr_nq100,  pred: data/raw/predictions/tadtr_nq100/anet/detection_nms_top2.json, source_type: json}
+
+# Raw per-annotator sources. `derived` is the released annotation the benchmark
+# evaluates on, built per clip as the union of every annotator's primary
+# moments (ActionFormer tools/convert_ego4d_trainval.py, without its stride
+# alignment); the annotation experiment rebuilds that union and checks it
+# against `derived`. Every other key is a `subset` value of `derived`.
+annotator_sources:
+  ego4d:
+    derived: data/raw/annotations/ego4d/ego4d.json
+    training: data/raw/annotations/ego4d/moments_train.json
+    validation: data/raw/annotations/ego4d/moments_val.json

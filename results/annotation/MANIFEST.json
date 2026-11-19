@@ -1,0 +1,19 @@
+{
+ "chain": "annotation",
+ "command": "python experiments/annotation/run_annotation.py --out-dir runs/annotation",
+ "config": {
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "inputs": [
+  "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+  "data/raw/predictions/actionformer/anet/post_nms.pkl"
+ ],
+ "results": {
+  "01_transfer_check.csv": "fe08698dbb184e4a288ceb7d662eabae2e23765ab07e9a539f8f729999832b64",
+  "02_noise_curve.csv": "0f6a9bf20bc4b7210f690b96a4de7b9d83b74005cd2a269f69c869441c329aca",
+  "04_claimA_floor.csv": "0aed28de757123ce57fd9cbb2e6705f9446fe985d10c3ffeee9788f4685f0ccd",
+  "05_claimB_icc.csv": "670678ead0c6b2567dece285dc3e55cb35d2629c0b31288a42d6554b54ab72da",
+  "09_multiseed_ci.csv": "ee5efa0a6ed7013a606b70ae82a31e5be56662d235e8fd3794cbf0bc1e5fbd31",
+  "10_target_shift.csv": "714eda7cd5812c79819a57f67bcb2c7057255eb9213b759a6cc8b4efb9b6e22f"
+ }
+}

@@ -1,0 +1,13 @@
+claim,metric,population,tau,n,fit_population,calibrator_family,raw_cross,cal_pop0_floor,same_world_refit,floor_over_refit
+A_credit_ece,credit_ECE,full,0.1,1042000,full,pooled,0.0469,0.0026,0.0,61.4
+A_credit_ece,credit_ECE,lrp_crossfit,0.1,4425,lrp_crossfit,pooled,0.2081,0.1793,0.0101,17.7
+A_credit_ece,credit_ECE,full,0.2,1042000,full,pooled,0.0469,0.0026,0.0,78.1
+A_credit_ece,credit_ECE,lrp_crossfit,0.2,4425,lrp_crossfit,pooled,0.2208,0.1622,0.0078,20.7
+A_credit_ece,credit_ECE,full,0.3,1042000,full,pooled,0.0469,0.0025,0.0,65.1
+A_credit_ece,credit_ECE,lrp_crossfit,0.3,4425,lrp_crossfit,pooled,0.2304,0.1432,0.0091,15.7
+A_credit_ece,credit_ECE,full,0.4,1042000,full,pooled,0.047,0.0024,0.0,66.8
+A_credit_ece,credit_ECE,lrp_crossfit,0.4,4425,lrp_crossfit,pooled,0.2431,0.1206,0.0085,14.2
+A_credit_ece,credit_ECE,full,0.5,1042000,full,pooled,0.047,0.0022,0.0,86.8
+A_credit_ece,credit_ECE,lrp_crossfit,0.5,4425,lrp_crossfit,pooled,0.2547,0.104,0.006,17.3
+A_laece0,LaECE0,full,,1042000,full,pooled,0.0477,0.001,0.0,25.33
+A_laece0,LaECE0,lrp_crossfit,,4425,lrp_crossfit,pooled,0.2778,0.1002,0.0089,11.23

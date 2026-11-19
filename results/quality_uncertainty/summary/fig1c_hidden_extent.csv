@@ -1,0 +1,3 @@
+dataset,label_id,label_name,n_eval_instances,gt_dur_min,gt_dur_max,detector,pred_n,pred_len_median,video_id,gt_start,gt_end,gt_dur,ceiling
+epic_verb,10,mix,287,0.5,133.35000000000002,actionformer,5820,2.9590539932250977,P15_06,411.09000000000003,412.4,1.3099999999999454,0.4427090560021061
+epic_verb,10,mix,287,0.5,133.35000000000002,actionformer,5820,2.9590539932250977,P32_06,303.24,377.51,74.26999999999998,0.03984184722263496

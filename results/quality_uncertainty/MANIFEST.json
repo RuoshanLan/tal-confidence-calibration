@@ -1,0 +1,37 @@
+{
+ "chain": "quality_uncertainty",
+ "command": "python experiments/quality_uncertainty/run_quality_uncertainty.py --config src/tal_calibration/protocols/quality_uncertainty/configs/formal_all_datasets.yaml --runs-root runs/quality_uncertainty",
+ "config": {
+  "src/tal_calibration/protocols/quality_uncertainty/configs/formal_all_datasets.yaml": "7c321d685e2d7aeb19b31df859960484c9e8bdc13dc3e578254acf3f8fc2b881",
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "inputs": [
+  "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+  "data/raw/annotations/ego4d/ego4d.json",
+  "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json",
+  "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json",
+  "data/raw/annotations/thumos/thumos14.json",
+  "data/raw/predictions/actionformer/anet/post_nms.pkl",
+  "data/raw/predictions/actionformer/anet/pre_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/post_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/pre_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/pre_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/pre_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/post_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/pre_nms.pkl"
+ ],
+ "results": {
+  "summary/10_floor_seeds.csv": "129430cc093fd9c06dd3592233d5f95a19382f215d27da0c0cb9f85bdf38bfd8",
+  "summary/10_interval_seeds.csv": "dee19ad7f9b934221b76cccd76babc0b1b6a584f1a7cdeef4c5e7aa90c0eae4f",
+  "summary/10_mechanism_seeds.csv": "71604098c5ff863b77a798a05efb3f46fb9ccae3dc74e756a933f54aad0bbc9f",
+  "summary/10_point_seeds.csv": "aa00be29cd4677cfb22367b79ebe8cb7ea673725228fbd78ef01ef5dc0ff47c8",
+  "summary/10_selection_ledger.csv": "18187990837e9e45707f6e6657a52bf1b83173672e8d0aae43c1112b23af8ab2",
+  "summary/11_readout_attribution.csv": "3f142d10a15ea1a1bcf9b0cc241f83a245779f6d2ea6a7455de8b1c52f65bceb",
+  "summary/11_readout_convention.csv": "bb1c1e566b53f4e19e13cedde45c9adf3a321275c413a4c0a9ffaa6eaf6fec2a",
+  "summary/11_readout_coverage.csv": "cb24ad1586bc7523c80db1ab84a62a7f01465feabc3bbe24e86cf7c632b0d49d",
+  "summary/11_readout_population.csv": "5f052a333fbb700cf41bc9947d13d409a1d2f8782e180cc37fcf4482fb8f5386",
+  "summary/fig1c_hidden_extent.csv": "7a691ccefaca3dbb10349abba63546fcd207aa1eeee57f903a2e1fcae1ed882f"
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "chain": "benchmark",
+ "command": "python experiments/benchmark/run_benchmark.py --out-dir runs/benchmark",
+ "config": {
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "inputs": [
+  "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+  "data/raw/annotations/ego4d/ego4d.json",
+  "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json",
+  "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json",
+  "data/raw/annotations/thumos/thumos14.json",
+  "data/raw/predictions/actionformer/anet/post_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/post_nms.pkl",
+  "data/raw/predictions/tadtr/anet/detection_nms_top2.json",
+  "data/raw/predictions/tadtr/thumos/detection_nms.json",
+  "data/raw/predictions/tadtr_nq100/anet/detection_nms_top2.json",
+  "data/raw/predictions/te_tad/epic_noun/t_nms.json",
+  "data/raw/predictions/te_tad/epic_verb/t_nms.json",
+  "data/raw/predictions/te_tad/thumos/t_nms.json",
+  "data/raw/predictions/temporalmaxer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/temporalmaxer/thumos/post_nms.pkl",
+  "data/raw/predictions/tridet/anet/post_nms_ext.pkl",
+  "data/raw/predictions/tridet/epic_noun/post_nms.pkl",
+  "data/raw/predictions/tridet/epic_verb/post_nms.pkl",
+  "data/raw/predictions/tridet/thumos/post_nms.pkl"
+ ],
+ "results": {
+  "01_benchmark_main.csv": "58d80a68ab4740ad68ab9711431ee127c91f7fe24bfda9e5d51ef65df6535e38",
+  "01_pair_summary.csv": "f60204baa80de39f8bd37a7341b5a1898668e28df571ecf5591ad749efb5d6ef",
+  "02_population_dilution.csv": "96ab5d4d8014eabb1037c6684e144df22d4a5052ced9b58e93db1c5bb81c4bb4",
+  "05_bootstrap_ci.csv": "4f075d5454079d0b6c5ecfae620b79fe12bf9c58d4175579b064fea49ac776dd",
+  "08_laece_reveal.csv": "45515f3e2de328e5cbb3872382eab3a05756a970745efdc831e62900ef5d59fe",
+  "10_lrp_operating_point.csv": "0183808030cb1083c8f1ca7b8062942c1234f1d8cb911e4424a2f121164f22ee",
+  "13_reliability_bins.csv": "889a6178a0db4f0e60fd507a2dc8615708184a50ab8a60485017fbf8ab81ed91"
+ }
+}

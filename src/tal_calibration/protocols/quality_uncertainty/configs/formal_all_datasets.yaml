@@ -1,0 +1,10 @@
+# The main-paper run: the five ActionFormer datasets, seeds 0-4. Produces
+# results/quality_uncertainty/ (Table 4, supp. Sec. E readout tables and the
+# Fig. 1(c) data).
+run:
+  n_boot: 2000
+  figure_data: true
+experiments:
+  quality_uncertainty:
+    datasets: [thumos, epic_verb, epic_noun, ego4d, anet]
+    seeds: [0, 1, 2, 3, 4]

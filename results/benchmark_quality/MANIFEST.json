@@ -1,0 +1,33 @@
+{
+ "chain": "benchmark_quality",
+ "command": "python experiments/benchmark/run_benchmark_quality.py --runs-root runs/benchmark_quality",
+ "config": {
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "inputs": [
+  "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+  "data/raw/annotations/ego4d/ego4d.json",
+  "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json",
+  "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json",
+  "data/raw/annotations/thumos/thumos14.json",
+  "data/raw/predictions/actionformer/anet/post_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/post_nms.pkl",
+  "data/raw/predictions/tadtr/thumos/detection_nms.json",
+  "data/raw/predictions/tadtr_nq100/anet/detection_nms_top2.json",
+  "data/raw/predictions/te_tad/epic_noun/t_nms.json",
+  "data/raw/predictions/te_tad/epic_verb/t_nms.json",
+  "data/raw/predictions/te_tad/thumos/t_nms.json",
+  "data/raw/predictions/temporalmaxer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/temporalmaxer/thumos/post_nms.pkl",
+  "data/raw/predictions/tridet/anet/post_nms_ext.pkl",
+  "data/raw/predictions/tridet/epic_noun/post_nms.pkl",
+  "data/raw/predictions/tridet/epic_verb/post_nms.pkl",
+  "data/raw/predictions/tridet/thumos/post_nms.pkl"
+ ],
+ "results": {
+  "12_table1_quality_estimation.csv": "36c55f0e94a06b2d28494d57b50468d33513883ce9f723e780395c3432439627"
+ }
+}

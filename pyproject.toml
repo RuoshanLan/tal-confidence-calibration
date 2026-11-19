@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tal_calibration"
+version = "0.0.0"
+description = "TAL calibration framework: calibration, temporal geometry, matching and TAL evaluation for the paper's experiments"
+requires-python = ">=3.10"
+# Runtime deps mirror environment.yml.
+dependencies = [
+    "numpy>=2.2,<3",
+    "pandas>=2.3,<3",
+    "scipy>=1.15,<2",
+    "scikit-learn>=1.7,<2",
+    "pyarrow>=25",
+    "pyyaml>=6",
+    "netcal==1.4.0",
+]
+
+[project.optional-dependencies]
+# torch (required by netcal) is installed by environment.yml from the PyTorch
+# cu130 pip index; listed here for installs without environment.yml.
+torch = ["torch>=2.10"]
+
+[project.scripts]
+tal-calibration = "tal_calibration.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"tal_calibration.third_party" = ["*.txt"]

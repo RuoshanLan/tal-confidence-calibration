@@ -1,0 +1,40 @@
+{
+ "chain": "annotation_ego4d",
+ "command": "python experiments/annotation_ego4d/run_annotation_ego4d.py --out-dir runs/annotation_ego4d",
+ "config": {
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "params": {
+  "audit_tau": 0.1,
+  "audit_taus": [
+   0.1,
+   0.2,
+   0.3,
+   0.4,
+   0.5
+  ],
+  "lrp_anchor_tau": 0.3,
+  "n_worlds": 10,
+  "world_seeds": [
+   43,
+   44,
+   45,
+   46,
+   47
+  ],
+  "n_boot": 200
+ },
+ "inputs": [
+  "data/raw/annotations/ego4d/ego4d.json",
+  "data/raw/annotations/ego4d/moments_train.json",
+  "data/raw/annotations/ego4d/moments_val.json",
+  "data/raw/predictions/actionformer/ego4d/post_nms.pkl"
+ ],
+ "results": {
+  "00_parity.csv": "df1c915cf1f93de149773b2964b6de59ef20064c89617f19c3817775f1135537",
+  "04_claimA_floor.csv": "a034347266ec287a186ccacad84375b1d8a8f52618b7d134d239d0ef5d6f6f2d",
+  "05_claimB_icc.csv": "c39d441ae9f893c86adce639b8ad767d3948dd38da096b55a673dffe8d828e85",
+  "09_multiseed_ci.csv": "b7b84ae7c57d52e38109c84e57708bc22a8dca42cc8f6cc1b0d219a4dcdb8308",
+  "10_target_shift.csv": "1a46569f2f0f0a00a1592c54758db24e0677c3332c3992cd10d011c4e61ceedc"
+ }
+}

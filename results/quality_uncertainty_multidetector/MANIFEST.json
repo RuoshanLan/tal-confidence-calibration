@@ -1,0 +1,38 @@
+{
+ "chain": "quality_uncertainty_multidetector",
+ "command": "python experiments/quality_uncertainty/run_quality_uncertainty.py --config src/tal_calibration/protocols/quality_uncertainty/configs/formal_multi_detector.yaml --runs-root runs/quality_uncertainty_multidetector",
+ "config": {
+  "src/tal_calibration/protocols/quality_uncertainty/configs/formal_multi_detector.yaml": "d9169d74670baa20b69531adaa9de5faa8ce67eaf164998e73154d793e77fbcc",
+  "configs/datasets.yaml": "e5617f4c07a680c4a2527bc8554f0b4c03bd5ca58334f7106491ef50d81690b1"
+ },
+ "inputs": [
+  "data/raw/annotations/anet/anet1.3_tsp_filtered.json",
+  "data/raw/annotations/ego4d/ego4d.json",
+  "data/raw/annotations/epic_noun/epic_kitchens_100_noun.json",
+  "data/raw/annotations/epic_verb/epic_kitchens_100_verb.json",
+  "data/raw/annotations/thumos/thumos14.json",
+  "data/raw/predictions/actionformer/anet/post_nms.pkl",
+  "data/raw/predictions/actionformer/anet/pre_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/post_nms.pkl",
+  "data/raw/predictions/actionformer/ego4d/pre_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_noun/pre_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/post_nms.pkl",
+  "data/raw/predictions/actionformer/epic_verb/pre_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/post_nms.pkl",
+  "data/raw/predictions/actionformer/thumos/pre_nms.pkl",
+  "data/raw/predictions/tadtr/thumos/detection_nms.json",
+  "data/raw/predictions/te_tad/epic_verb/t_nms.json",
+  "data/raw/predictions/te_tad/thumos/t_nms.json",
+  "data/raw/predictions/tridet/epic_verb/post_nms.pkl",
+  "data/raw/predictions/tridet/epic_verb/pre_nms.pkl",
+  "data/raw/predictions/tridet/thumos/post_nms.pkl",
+  "data/raw/predictions/tridet/thumos/pre_nms.pkl"
+ ],
+ "results": {
+  "summary/10_floor_seeds.csv": "68f986f83a17f669c10b6fca4784a35ea32607d0ad99c00b565b0a178f992bf3",
+  "summary/10_interval_seeds.csv": "aa6a31d7821cc27a7bf8e308cd6d016ba04e84a0e5963002c918a72b3f7c16de",
+  "summary/10_mechanism_seeds.csv": "0bffeef7f86e6856440d7fcbc9ebd915494280cab0a894861f5d173f668c6250",
+  "summary/10_point_seeds.csv": "df57e7e4311ca8c433465286331b2a22514c6385ddcac72ec55f5e29d9db704e"
+ }
+}
